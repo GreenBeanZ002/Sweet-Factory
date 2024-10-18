@@ -9,6 +9,8 @@ public class moveSweetScript : MonoBehaviour
 
     public void FixedUpdate()
     {
+        //supports full WASD movement but up & down are blocked due to game's needs
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
