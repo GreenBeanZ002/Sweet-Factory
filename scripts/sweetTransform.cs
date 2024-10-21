@@ -6,6 +6,8 @@ public class sweetTransform : MonoBehaviour
 {
     public GameObject originalSweet;
     public GameObject newSweet;
+    public Camera camera;
+
     void Update()
     {
         //When the "Space Key is pressed spawns a new sweet prefab and deletes the static sweet
@@ -13,6 +15,7 @@ public class sweetTransform : MonoBehaviour
         {
             var transformedSweet = Instantiate(newSweet, new Vector3(originalSweet.transform.position.x, originalSweet.transform.position.y, 0), Quaternion.identity);
             Destroy(originalSweet);
+            camera.transform.Translate(0, -3, 0);
         }
     }
 }
